@@ -1,10 +1,16 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="app">
+    <app-nav />
+    <router-view class="page" />
   </div>
-  <router-view />
 </template>
+
+<script>
+import AppNav from "./components/AppNav";
+export default {
+  components: { AppNav }
+};
+</script>
 
 <style>
 #app {
@@ -28,3 +34,4 @@
   color: #42b983;
 }
 </style>
+
